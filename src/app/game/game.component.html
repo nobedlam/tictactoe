@@ -1,0 +1,27 @@
+<h1>Tic-Tac-Toe</h1>
+
+<div class="game">
+    <button (click)="newGame()">Start The Game</button>
+
+    <div class="field" > 
+       <div class="row">
+            <button (click)="move(0)">{{board[0]}}</button>
+            <button (click)="move(1)">{{board[1]}}</button>
+            <button (click)="move(2)">{{board[2]}}</button>
+        </div>
+        <div class="row">
+            <button (click)="move(3)">{{board[3]}}</button>
+            <button (click)="move(4)">{{board[4]}}</button>
+            <button (click)="move(5)">{{board[5]}}</button>
+        </div>
+        <div class="row">
+            <button (click)="move(6)">{{board[6]}}</button>
+            <button (click)="move(7)">{{board[7]}}</button>
+            <button (click)="move(8)">{{board[8]}}</button>
+        </div>
+</div>
+
+
+<h2 *ngIf = "isGameStarted">It is {{whosTurn}} turn</h2>
+<h2 *ngIf = "counter == 9">It's DRAW!!</h2>
+<h2 *ngIf = "winner">{{winner}} has won the game!!</h2>
